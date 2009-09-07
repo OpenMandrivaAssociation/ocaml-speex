@@ -8,6 +8,7 @@ URL:            http://sourceforge.net/projects/savonet/files/
 Source0:        http://downloads.sourceforge.net/savonet/ocaml-speex/ocaml-speex-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  ocaml-findlib
+BuildRequires:  ocaml-ogg-devel
 BuildRequires:  libspeex-devel
 Requires:       speex
 
