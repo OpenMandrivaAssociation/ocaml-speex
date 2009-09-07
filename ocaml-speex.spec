@@ -9,6 +9,7 @@ Source0:        http://downloads.sourceforge.net/savonet/ocaml-speex/ocaml-speex
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  ocaml-findlib
 BuildRequires:  ocaml-ogg-devel
+BuildRequires:  libogg-devel
 BuildRequires:  libspeex-devel
 Requires:       speex
 
