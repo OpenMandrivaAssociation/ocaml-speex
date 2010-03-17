@@ -1,5 +1,5 @@
 Name:           ocaml-speex
-Version:        0.1.1
+Version:        0.1.2
 Release:        %mkrel 1
 Summary:        OCaml interface to the speex library
 License:        GPL
