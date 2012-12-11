@@ -1,16 +1,16 @@
 Name:           ocaml-speex
 Version:        0.1.2
-Release:        %mkrel 1
+Release:        2
 Summary:        OCaml interface to the speex library
 License:        GPL
 Group:          Development/Other
 URL:            http://sourceforge.net/projects/savonet/files/
 Source0:        http://downloads.sourceforge.net/savonet/ocaml-speex/ocaml-speex-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:  ocaml
 BuildRequires:  ocaml-findlib
 BuildRequires:  ocaml-ogg-devel
-BuildRequires:  libogg-devel
-BuildRequires:  libspeex-devel
+BuildRequires:  pkgconfig(ogg)
+BuildRequires:  pkgconfig(speex)
 Requires:       speex
 
 %description
@@ -38,16 +38,12 @@ make
 make doc
 
 %install
-rm -rf %{buildroot}
 export DESTDIR=%{buildroot}
 export OCAMLFIND_DESTDIR=%{buildroot}/%{_libdir}/ocaml
 export DLLDIR=$OCAMLFIND_DESTDIR/stublibs
 mkdir -p $OCAMLFIND_DESTDIR/stublibs
 mkdir -p $OCAMLFIND_DESTDIR/speex
 make install
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
@@ -66,4 +62,18 @@ rm -rf %{buildroot}
 %{_libdir}/ocaml/speex/*.cmxa
 %{_libdir}/ocaml/speex/*.cmx
 %{_libdir}/ocaml/speex/*.mli
+
+
+
+%changelog
+* Wed Mar 17 2010 Florent Monnier <blue_prawn@mandriva.org> 0.1.2-1mdv2010.1
++ Revision: 522810
+- update to new version 0.1.2
+
+* Mon Sep 07 2009 Florent Monnier <blue_prawn@mandriva.org> 0.1.1-1mdv2010.0
++ Revision: 432953
+- BuildRequires: libogg-devel
+- BuildRequires: ocaml-ogg-devel
+- BuildRequires: libspeex
+- import ocaml-speex
 
