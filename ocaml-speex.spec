@@ -1,6 +1,6 @@
 Name:           ocaml-speex
 Version:        0.1.2
-Release:        2
+Release:        3
 Summary:        OCaml interface to the speex library
 License:        GPL
 Group:          Development/Other
