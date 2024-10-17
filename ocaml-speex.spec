@@ -4,7 +4,7 @@ Release:        3
 Summary:        OCaml interface to the speex library
 License:        GPL
 Group:          Development/Other
-URL:            http://sourceforge.net/projects/savonet/files/
+URL:            https://sourceforge.net/projects/savonet/files/
 Source0:        http://downloads.sourceforge.net/savonet/ocaml-speex/ocaml-speex-%{version}.tar.gz
 BuildRequires:  ocaml
 BuildRequires:  ocaml-findlib
